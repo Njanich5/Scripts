@@ -1,4 +1,5 @@
 #!/usr/bin/perl
+#Author: Nicholas Janich
 
 $see = "/var/log/auth.log.1";
 print "Successful User Attempt List \n
