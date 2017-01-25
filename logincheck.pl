@@ -1,9 +1,8 @@
 #!/usr/bin/perl
-#/tdc484s04/hw03/hw03script.pl
 #Author:Nicholas Janich
 #Date: 1/27/2016
 #Description: Read /var/log/secure and count how many times a specific IP address fails authentication. Then track its location from Geo:IP:PurePearl
-#Usage: hw03script.pl <no args>
+
 
 $syslog = "/var/log/auth.log"; #file to read
 print "Failed Login List \n
