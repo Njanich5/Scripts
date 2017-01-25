@@ -10,7 +10,7 @@ logincheck.pl is a Linux/Unix script I made that checks for failed ssh login att
 
 
 <b>STEP 2 - Install Geo::IP::PurePerl</b><br>
-<ul> <li>A simple guide on how to install the Geo::IP::PurePerl module using CPAN can be found here: > https://www.garron.me/en/bits/install-geoip-cpan-ubuntu.html </ul> </li>
+<ul> <li>A simple guide on how to install the Geo::IP::PurePerl module using CPAN can be found here:  https://www.garron.me/en/bits/install-geoip-cpan-ubuntu.html </ul> </li>
 
 <ul><i>NOTE: You will need to change the last step to include PurePerl so the last step in that guide should be 'install Geo::IP::PurePerl'</i></ul>
 
