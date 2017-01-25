@@ -1,7 +1,7 @@
 # Scripts
 Collection of mostly perl and bash scripts
 
-LOGINCHECK.PL README
+####LOGINCHECK.PL README
 logincheck.pl is a Linux/Unix script I made that checks for failed ssh login attempts, tracks which country and IP these failed attempts came from, and counts how many times each IP has tried to login. Before you try running logincheck.pl there are a few things you'll need to check and setup to make sure it works. 
 
 <b>STEP 1 - Your log file</b><br>
@@ -15,7 +15,7 @@ logincheck.pl is a Linux/Unix script I made that checks for failed ssh login att
 <ul><i>NOTE: You will need to change the last step to include PurePerl so the last step in that guide should be 'install Geo::IP::PurePerl'</i></ul>
 
 <b>STEP 3 - Download GeoLiteCity database</b><br>
-<ul>Now to download the GeoLiteCity database type <br><i> 'wget -N http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz'</i><ul>
+<ul><li>Now to download the GeoLiteCity database type <br><i> 'wget -N http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz'</i></li>
 
 <li>Once you finish downloading the database we will need to unzip the file, to do this type <i>'gunzip GeoLiteCity.dat.gz'</i> </li>
 
@@ -24,5 +24,4 @@ logincheck.pl is a Linux/Unix script I made that checks for failed ssh login att
 <li><i>NOTE: this filepath may be different depending on how perl is setup on your os. You may need to change the file location in line ## to the same folder you found from the previous locate command.</i></li>
 
 <li>After you find the path we will then move the database into the same folder that your PurePerl module is located so on my ubuntu machine my command would look like this <i>'sudo mv GeoLiteCity.dat /usr/local/share/perl/5.18.2/Geo/IP/'</i> since this was the folder I found when I ran the previous locate command.</li>
-
 Once these steps are properly completed you should be all set to run logincheck.pl
