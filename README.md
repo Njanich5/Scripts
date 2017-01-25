@@ -10,7 +10,7 @@ This script is currently setup to run on Debian or Ubuntu machines so the log fi
 <b>STEP 2 - Install Geo::IP::PurePerl</b><br>
 A simple guide on how to install the Geo::IP::PurePerl module using CPAN can be found here : https://www.garron.me/en/bits/install-geoip-cpan-ubuntu.html
 
-NOTE: You will need to change the last step to include PurePerl so the last step in that guide should be <i>'install Geo::IP::PurePerl'</i>
+<u><i>NOTE: You will need to change the last step to include PurePerl so the last step in that guide should be <i>'install Geo::IP::PurePerl'</u></i>
 
 <b>STEP 3 - Download GeoLiteCity database</b><br>
 Now to download the GeoLiteCity database type <br><i> 'wget -N http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz'</i>
@@ -19,7 +19,7 @@ Once you finish downloading the database we will need to unzip the file, to do t
 
 Next, to install the database you will need to locate where your PurePerl module resides. A simple <i>'locate PurePerl.pm'</i> command should give you a path like '/usr/local/share/perl/5.18.2/Geo/IP/PurePerl.pm' on ubuntu. 
 
-NOTE: this filepath may be different depending on how perl is setup on your os. You may need to change the file location in line ## to the same folder you found from the previous locate command.
+<u><i>NOTE: this filepath may be different depending on how perl is setup on your os. You may need to change the file location in line ## to the same folder you found from the previous locate command.</u></i>
 
 After you find the path we will then move the database into the same folder that your PurePerl module is located so on my ubuntu machine my command would look like this <i>'sudo mv GeoLiteCity.dat /usr/local/share/perl/5.18.2/Geo/IP/'</i> since this was the folder I found when I ran the previous locate command.
 
