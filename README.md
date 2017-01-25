@@ -15,7 +15,7 @@ logincheck.pl is a Linux/Unix script I made that checks for failed ssh login att
 <ul><i>NOTE: You will need to change the last step to include PurePerl so the last step in that guide should be 'install Geo::IP::PurePerl'</i></ul>
 
 <b>STEP 3 - Download GeoLiteCity database</b><br>
-<ul><li>Now to download the GeoLiteCity database type <br><i> 'wget -N http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz'</i></li></ul>
+<ul><li>Now to download the GeoLiteCity database type <br><i> 'wget -N http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz'</i></li>
 
 <li>Once you finish downloading the database we will need to unzip the file, to do this type <i>'gunzip GeoLiteCity.dat.gz'</i> </li>
 
