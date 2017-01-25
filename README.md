@@ -17,7 +17,9 @@ Now to download the GeoLiteCity database type <br><i> 'wget -N http://geolite.ma
 
 Once you finish downloading the database we will need to unzip the file, to do this type <i>'gunzip GeoLiteCity.dat.gz'</i>
 
-Next, to install the database you will need to locate where your PurePerl module resides. A simple <i>'locate PurePerl.pm'</i> command should give you a path like '/usr/local/share/perl/5.18.2/Geo/IP/PurePerl.pm' on ubuntu. NOTE: this filepath may be different depending on how perl is setup on your os.
+Next, to install the database you will need to locate where your PurePerl module resides. A simple <i>'locate PurePerl.pm'</i> command should give you a path like '/usr/local/share/perl/5.18.2/Geo/IP/PurePerl.pm' on ubuntu. 
+
+NOTE: this filepath may be different depending on how perl is setup on your os. You may need to change the file location in line ## to the same folder you found from the previous locate command.
 
 After you find the path we will then move the database into the same folder that your PurePerl module is located so on my ubuntu machine my command would look like this <i>'sudo mv GeoLiteCity.dat /usr/local/share/perl/5.18.2/Geo/IP/'</i> since this was the folder I found when I ran the previous locate command.
 
