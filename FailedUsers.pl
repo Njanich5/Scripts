@@ -1,4 +1,5 @@
 #!/usr/bin/perl
+#Author: Nicholas Janich
 
 $see = "/var/log/auth.log";
 
