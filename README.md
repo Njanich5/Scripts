@@ -9,7 +9,8 @@ This script is currently setup to run on Debian or Ubuntu machines so the log fi
 
 <b>STEP 2 - Install Geo::IP::PurePerl</b><br>
 A simple guide on how to install the Geo::IP::PurePerl module using CPAN can be found here : https://www.garron.me/en/bits/install-geoip-cpan-ubuntu.html
-<br>NOTE: You will need to change the last step to include PurePerl so the last step in that guide should be <i>'install Geo::IP::PurePerl'</i>
+
+NOTE: You will need to change the last step to include PurePerl so the last step in that guide should be <i>'install Geo::IP::PurePerl'</i>
 
 <b>STEP 3 - Download GeoLiteCity database</b><br>
 Now to download the GeoLiteCity database type <br><i> 'wget -N http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz'</i>
