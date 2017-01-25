@@ -5,8 +5,8 @@ LOGINCHECK.PL README
 logincheck.pl is a Linux/Unix script I made that checks for failed ssh login attempts, tracks which country and IP these failed attempts came from, and counts how many times each IP has tried to login. Before you try running logincheck.pl there are a few things you'll need to check and setup to make sure it works. 
 
 <b>STEP 1 - Your log file</b><br>
-<ul><li>This script is currently setup to run on Debian or Ubuntu machines so the log file to read failed login attempts is located at /var/log/auth.log. </li></ul>
-<li>If you run CentOS/RHEL you will need to change the $syslog file to '/var/log/secure'. For other os types, you will need to change the $syslog variable to wherever failed ssh attempts are stored.</li></ul>
+<ul>This script is currently setup to run on Debian or Ubuntu machines so the log file to read failed login attempts is located at /var/log/auth.log.</ul>
+<li>If you run CentOS/RHEL you will need to change the $syslog file to '/var/log/secure'. For other os types, you will need to change the $syslog variable to wherever failed ssh attempts are stored.</li>
 
 
 <b>STEP 2 - Install Geo::IP::PurePerl</b><br>
