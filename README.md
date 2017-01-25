@@ -15,13 +15,13 @@ logincheck.pl is a Linux/Unix script I made that checks for failed ssh login att
 <ul><i>NOTE: You will need to change the last step to include PurePerl so the last step in that guide should be 'install Geo::IP::PurePerl'</i></ul>
 
 <b>STEP 3 - Download GeoLiteCity database</b><br>
-<ul><li>Now to download the GeoLiteCity database type <br><i> 'wget -N http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz'</i></li>
+<ul><li>Now to download the GeoLiteCity database type <br><i> 'wget -N http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz'</i></li></ul>
 
-<li>Once you finish downloading the database we will need to unzip the file, to do this type <i>'gunzip GeoLiteCity.dat.gz'</i> </li>
+<ul><li>Once you finish downloading the database we will need to unzip the file, to do this type <i>'gunzip GeoLiteCity.dat.gz'</i> </li> </ul>
 
-<li>Next, to install the database you will need to locate where your PurePerl module resides. A simple <i>'locate PurePerl.pm'</i> command should give you a path like '/usr/local/share/perl/5.18.2/Geo/IP/PurePerl.pm' on ubuntu.</li>
+<ul><li>Next, to install the database you will need to locate where your PurePerl module resides. A simple <i>'locate PurePerl.pm'</i> command should give you a path like '/usr/local/share/perl/5.18.2/Geo/IP/PurePerl.pm' on ubuntu.</li></ul>
 
-<br><i>NOTE: this filepath may be different depending on how perl is setup on your os. You may need to change the file location in line 25 to the same folder you found from the previous locate command.</i>
+<ul><i>NOTE: this filepath may be different depending on how perl is setup on your os. You may need to change the file location in line 25 to the same folder you found from the previous locate command.</i></ul>
 
-<li>After you find the path we will then move the database into the same folder that your PurePerl module is located so on my ubuntu machine my command would look like this <i>'sudo mv GeoLiteCity.dat /usr/local/share/perl/5.18.2/Geo/IP/'</i> since this was the folder I found when I ran the previous locate command.</li> </ul>
+<ul><li>After you find the path we will then move the database into the same folder that your PurePerl module is located so on my ubuntu machine my command would look like this <i>'sudo mv GeoLiteCity.dat /usr/local/share/perl/5.18.2/Geo/IP/'</i> since this was the folder I found when I ran the previous locate command.</li> </ul>
 Once these steps are properly completed you should be all set to run logincheck.pl
