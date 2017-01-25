@@ -23,5 +23,5 @@ logincheck.pl is a Linux/Unix script I made that checks for failed ssh login att
 
 <li><i>NOTE: this filepath may be different depending on how perl is setup on your os. You may need to change the file location in line 25 to the same folder you found from the previous locate command.</i></li>
 
-<li>After you find the path we will then move the database into the same folder that your PurePerl module is located so on my ubuntu machine my command would look like this <i>'sudo mv GeoLiteCity.dat /usr/local/share/perl/5.18.2/Geo/IP/'</i> since this was the folder I found when I ran the previous locate command.</li>
+<li>After you find the path we will then move the database into the same folder that your PurePerl module is located so on my ubuntu machine my command would look like this <i>'sudo mv GeoLiteCity.dat /usr/local/share/perl/5.18.2/Geo/IP/'</i> since this was the folder I found when I ran the previous locate command.</li> </ul>
 Once these steps are properly completed you should be all set to run logincheck.pl
