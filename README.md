@@ -12,9 +12,13 @@ A simple guide on how to install the Geo::IP::PurePerl module using CPAN can be 
 <br>NOTE: You will need to change the last step to include PurePerl so the last step in that guide should be <i>'install Geo::IP::PurePerl'</i>
 
 <b>STEP 3 - Download GeoLiteCity database</b><br>
-Now to download the GeoLiteCity database type <i> 'wget -N http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz'</i>
-Once you finish downloading the database we will need to unzip the file, to do this type <i>'gunzip GeoLiteCity.dat.gz'</i>
-Next, to install the database you will need to locate where your PurePerl module resides. A simple <i>'locate PurePerl.pm'</i> command should give you a path like '/usr/local/share/perl/5.18.2/Geo/IP/PurePerl.pm' on ubuntu. NOTE: this filepath may be different depending on how perl is setup on your os.
-After you find the path we will then move the database into the same folder that your PurePerl module is located so on my ubuntu machine my command would look like this <i>'sudo mv GeoLiteCity.dat /usr/local/share/perl/5.18.2/Geo/IP/'</i> since this was the folder I found when I ran the previous locate command.
+Now to download the GeoLiteCity database type <br><i> 'wget -N http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz'</i>
+
+<br>Once you finish downloading the database we will need to unzip the file, to do this type <i>'gunzip GeoLiteCity.dat.gz'</i>
+
+<br>Next, to install the database you will need to locate where your PurePerl module resides. A simple <i>'locate PurePerl.pm'</i> command should give you a path like '/usr/local/share/perl/5.18.2/Geo/IP/PurePerl.pm' on ubuntu. NOTE: this filepath may be different depending on how perl is setup on your os.
+
+<br>After you find the path we will then move the database into the same folder that your PurePerl module is located so on my ubuntu machine my command would look like this <i>'sudo mv GeoLiteCity.dat /usr/local/share/perl/5.18.2/Geo/IP/'</i> since this was the folder I found when I ran the previous locate command.
+
 
 Once these steps are properly completed you should be all set to run logincheck.pl
