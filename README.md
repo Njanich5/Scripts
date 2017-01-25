@@ -5,14 +5,18 @@ LOGINCHECK.PL README
 logincheck.pl is a Linux/Unix script I made that checks for failed ssh login attempts, tracks which country and IP these failed attempts came from, and counts how many times each IP has tried to login. Before you try running logincheck.pl there are a few things you'll need to check and setup to make sure it works. 
 
 <b>STEP 1 - Your log file</b><br>
+<ul>
 This script is currently setup to run on Debian or Ubuntu machines so the log file to read failed login attempts is located at /var/log/auth.log. If you run CentOS/RHEL you will need to change the $syslog file to '/var/log/secure'. For other os types, you will need to change the $syslog variable to wherever failed ssh attempts are stored.
-
+</ul>
 <b>STEP 2 - Install Geo::IP::PurePerl</b><br>
+<ul>
 A simple guide on how to install the Geo::IP::PurePerl module using CPAN can be found here : https://www.garron.me/en/bits/install-geoip-cpan-ubuntu.html
 
-<ul><i>NOTE: You will need to change the last step to include PurePerl so the last step in that guide should be <i>'install Geo::IP::PurePerl'</i></ul>
+<i>NOTE: You will need to change the last step to include PurePerl so the last step in that guide should be <i>'install Geo::IP::PurePerl'</i>
+</ul>
 
 <b>STEP 3 - Download GeoLiteCity database</b><br>
+<ul>
 Now to download the GeoLiteCity database type <br><i> 'wget -N http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz'</i>
 
 Once you finish downloading the database we will need to unzip the file, to do this type <i>'gunzip GeoLiteCity.dat.gz'</i>
@@ -23,5 +27,5 @@ Next, to install the database you will need to locate where your PurePerl module
 
 After you find the path we will then move the database into the same folder that your PurePerl module is located so on my ubuntu machine my command would look like this <i>'sudo mv GeoLiteCity.dat /usr/local/share/perl/5.18.2/Geo/IP/'</i> since this was the folder I found when I ran the previous locate command.
 
-
+</ul>
 Once these steps are properly completed you should be all set to run logincheck.pl
