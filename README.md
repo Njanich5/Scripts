@@ -1,7 +1,4 @@
-# Script README
-READMEs for all perl and bash scripts
-
-####LOGINCHECK.PL README
+##LOGINCHECK.PL README
 logincheck.pl is a Linux/Unix script I made that checks for failed ssh login attempts, tracks which country and IP these failed attempts came from, and counts how many times each IP has tried to login. Before you try running logincheck.pl there are a few things you'll need to check and setup to make sure it works. 
 
 <b>STEP 1 - Your log file</b><br>
