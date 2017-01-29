@@ -16,9 +16,10 @@ logincheck.pl is a Linux/Unix script I made that checks for failed ssh login att
 
 <ul><li>Once you finish downloading the database we will need to unzip the file, to do this type <i>'gunzip GeoLiteCity.dat.gz'</i> </li> </ul>
 
-<ul><li>Next, to install the database you will need to locate where your PurePerl module resides. A simple <i>'locate PurePerl.pm'</i> command should give you a path like '/usr/local/share/perl/5.18.2/Geo/IP/PurePerl.pm' on ubuntu.</li></ul>
-
-<ul><i>NOTE: this filepath may be different depending on how perl is setup on your os. You may need to change the file location in line 25 to the same folder you found from the previous locate command.</i></ul>
+<ul><li>Next, to install the database you will need to locate where your PurePerl module resides. A simple <i>'locate PurePerl.pm'</i> command should give you a path like '/usr/local/share/perl/5.18.2/Geo/IP/PurePerl.pm' on ubuntu. If locate doesn't give you a file path run this command <i> sudo updatedb</i>. Now copy this path as we will use it later to tell the script where to read the GeoLiteCity database file.</li></ul>
 
 <ul><li>After you find the path we will then move the database into the same folder that your PurePerl module is located so on my ubuntu machine my command would look like this <i>'sudo mv GeoLiteCity.dat /usr/local/share/perl/5.18.2/Geo/IP/'</i> since this was the folder I found when I ran the previous locate command.</li> </ul>
+
+<ul><li>Now edit the logincheck.pl script with a text editor of choice and change the filepath in line 26 to the path we copied before and add GeoLiteCity.dat to the end of the path. So my filepath in line 26 looks like this '<i>/usr/local/share/perl/5.18.2/Geo/IP/GeoLiteCity.dat</i>' Write and quit to save these changes once your filepath matches the one we found from our locate command.</ul></li> 
+<ul><li>
 Once these steps are properly completed you should be all set to run logincheck.pl
