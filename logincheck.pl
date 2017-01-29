@@ -1,8 +1,9 @@
 #!/usr/bin/perl
 #Author:Nicholas Janich
 #Date: 1/27/2016
-#Description: Read /var/log/secure and count how many times a specific IP address fails authentication. Then track its location from Geo:IP:PurePearl
-
+#Description: Read /var/log/secure and count how many times a specific IP address fails authentication. 
+#             Then track its location from Geo:IP:PurePearl
+#********PLEASE SEE THE README TO MAKE NECESSARY CHANGES TO RUN THIS SCRIPT********************
 
 $syslog = "/var/log/auth.log"; #file to read
 print "Failed Login List \n
@@ -16,12 +17,11 @@ while( <FILEREAD> ) {
                ($tmp , $ip) = split(/=/, $data[13]); #split the rhost from the IP address given in $data[13]
                 $count{$ip}++; #add 1 to count for each occurence of the IP
                 }
-
-
 }
-close FILEREAD; #close the file once it finishes reading
-use Geo::IP::PurePerl;
 
+close FILEREAD; #close the file once it finishes reading
+
+use Geo::IP::PurePerl;
 $gi = Geo::IP::PurePerl->new( "/usr/share/GeoIP/GeoLiteCity.dat", GEOIP_STANDARD ); #put Geo IP info in #gi
 foreach $ip (sort {$count{$b} <=> $count{$a}} (keys %count)) #for each IP sort descending counts
         {
