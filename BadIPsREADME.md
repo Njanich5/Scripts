@@ -15,4 +15,4 @@ There are a few lines in this script that I put in personally but you may want t
   
 3. Prompt to run BlockIPs.pl
  - I use this script with BlockIPs.pl which takes the problematic IPs and filters them from my firewall but if you don't want to run BlockIPs.pl at the end then either comment out or delete everything after line 40.
-  * * Note: I you wish to run BlockIPs.pl after BadIps.pl make sure that these scripts are in the same directory and that you are using an account with sudo privleges since BlockIPs.pl uses a few sudo commands.
+  * <i>Note: I you wish to run BlockIPs.pl after BadIps.pl make sure that these scripts are in the same directory and that you are using an account with sudo privleges since BlockIPs.pl uses a few sudo commands. </i>
