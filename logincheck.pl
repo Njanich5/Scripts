@@ -22,7 +22,7 @@ while( <FILEREAD> ) {
 close FILEREAD; #close the file once it finishes reading
 
 use Geo::IP::PurePerl;
-$gi = Geo::IP::PurePerl->new( "/usr/share/GeoIP/GeoLiteCity.dat", GEOIP_STANDARD ); #put Geo IP info in #gi
+$gi = Geo::IP::PurePerl->new( "/usr/share/GeoIP/GeoLiteCity.dat", GEOIP_STANDARD ); #put Geo IP info in #gi, NOTE THIS FILE PATH WILL NEED TO BE CHANGED, SEE README
 foreach $ip (sort {$count{$b} <=> $count{$a}} (keys %count)) #for each IP sort descending counts
         {
         (  $country_code, $country_code3, $country_name, $region,
