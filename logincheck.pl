@@ -28,6 +28,6 @@ foreach $ip (sort {$count{$b} <=> $count{$a}} (keys %count)) #for each IP sort d
         (  $country_code, $country_code3, $country_name, $region,
            $city,         $postal_code,   $latitude,     $longitude,
            $metro_code,   $area_code) = $gi->get_city_record($ip); #pulls city report info from geo-ip variables and assigns them to each IP
-        printf " %-5d   %-2s    %-2s    %-15s   %-15s\n", $count{$ip}, $country_code, $region, $city, $ip;
+        printf " %-5d   %-2s    %-2s    %-15s   %-15s\n", $count{$ip}, $country_code, $region, $city, $ip; #formatted print to look pretty
 }
 
