@@ -38,13 +38,13 @@ close FILEREAD;
 
 #This code below asks if you would like to run an additional script to block the IPs found
 print "
-Would you like to run BlockIPs.pl and block these IPs found above? (y/n) ";
-chomp($blockprompt = <STDIN>);		#variable to store user entry
-if ($blockprompt eq "n" || $blockprompt eq "no" || $blockprompt eq "N" || $blockprompt eq "") {
+Would you like to run FilterIPs.pl and block these IPs found above? (y/n) ";
+chomp($prompt = <STDIN>);		#variable to store user entry
+if ($prompt eq "n" || $prompt eq "no" || $prompt eq "N" || $prompt eq "") {
 	exit;		#if user enters no, n, N or null, exit the script
 	}
 else { 
-	if ($blockprompt eq "y" || $blockprompt eq "yes" || $blockprompt eq "Y") {	#if user enters yes, y, or Y then run BlockIPs.pl
+	if ($prompt eq "y" || $prompt eq "yes" || $prompt eq "Y") {	#if user enters yes, y, or Y then run FilterIPs.pl
 		print("Running FilterIPs.pl.................................... \n");
 		system('sudo perl FilterIPs.pl');	#system call to run FilterIPs in shell, must have sudo privleges
 		}
