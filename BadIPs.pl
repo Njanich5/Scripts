@@ -1,5 +1,4 @@
 #!/usr/bin/perl
-#/tdc484s04/hw03/hw03script.pl
 #Author:Nicholas Janich
 #Desc: Script to read from failed ssh attempts and create a txt file that lists IPs that have failed to connect,
 #	and how many times they have tried to connect. I also made this script exclude local IPs that failed to 
