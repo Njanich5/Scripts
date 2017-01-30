@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 #Author:Nicholas Janich
-#Desc:  Script to take problematic IPs found in logincheck.pl and blocks them in iptables.
+#Desc:  Script to take problematic IPs found in BadIPs.pl and blocks them in iptables.
 #	This script reads from a file created by BadIPs.pl, this txt file contains IPs that have failed
 #	multiple ssh attempts. The script will then check if the IPs in the txt file already exist in
 #	the iptables config and if they don't, it will add a drop rule for ssh connections from that IP
