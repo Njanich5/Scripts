@@ -1,23 +1,24 @@
 #!/usr/bin/perl
 #Author:Nicholas Janich
-#Desc: Script to take problematic IPs found in logincheck.pl and blocks them in iptables.
-#Note: Must run as user with sudo privledges
+#Desc:  Script to take problematic IPs found in logincheck.pl and blocks them in iptables.
+#	This script reads from a file created by BadIPs.pl, this txt file contains IPs that have failed
+#	multiple ssh attempts. The script will then check if the IPs in the txt file already exist in
+#	the iptables config and if they don't, it will add a drop rule for ssh connections from that IP
+#
+#	Note: Must run as user with sudo privledges
 
 $BadIPs = "BadIPs.txt"; #file to read
 
 print "-------------IPs being added to drop list--------------
 \n";
+
 open(FILEREAD, "< $BadIPs"); #read BadIPs.txt
 while( <FILEREAD> ) {
         chomp($_); #remove newline
         @data = split(); #split the file by spaces
         foreach $ip(@data) {	#loop to check each IP per line from file
 		$check = `sudo iptables -L | grep $ip`;	#checks current iptable config for IPs being read from file
-#		print($grep);
-#		if( $ip !~ $grep) {
-#			print "yes";}
-#		else { print "no";}		
-		if ($ip !~ $check) {	#checks if IP already exists from grepping iptables 
+		if ($ip !~ $check) {		#checks if IP already exists from grepping iptables 
 			print "The IP Address $ip is already being dropped in iptables. \n";
 			}
 
