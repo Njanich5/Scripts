@@ -4,8 +4,8 @@
 #	and how many times they have tried to connect. I also made this script exclude local IPs that failed to 
 #	connect but you can change that functionality by modifying 2 lines as explained in the README.
 #	
-#	I added a prompt to run another script at the end called BlockIPs.pl. BlockIPs.pl takes the problematic
-#	IPs found from this script and will add them to be blocked from iptables. Please See the BlockIPsREADME
+#	I added a prompt to run another script at the end called FilterIPs.pl. FilterIPs.pl takes the problematic
+#	IPs found from this script and will add them to be blocked from iptables. Please See the FilterIPsREADME
 #	for more information on how it works.
 #
 $syslog = "/var/log/auth.log"; #file to read
@@ -45,8 +45,8 @@ if ($blockprompt eq "n" || $blockprompt eq "no" || $blockprompt eq "N" || $block
 	}
 else { 
 	if ($blockprompt eq "y" || $blockprompt eq "yes" || $blockprompt eq "Y") {	#if user enters yes, y, or Y then run BlockIPs.pl
-		print("Running BlockIPs.pl.................................... \n");
-		system('sudo perl BlockIPs.pl');	#system call to run BlockIPs in shell, must have sudo privleges
+		print("Running FilterIPs.pl.................................... \n");
+		system('sudo perl FilterIPs.pl');	#system call to run FilterIPs in shell, must have sudo privleges
 		}
 		 
  }
