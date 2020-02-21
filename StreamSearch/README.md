@@ -1,4 +1,4 @@
-####StreamSearch Script
+#### StreamSearch Script
 This is a small script I made for fun to search for shows currently streaming on NetFlix or Hulu. This README will be a short explanation of each file in this folder.
 
 <b> 1. StreamSearch.pl </b>
